@@ -24,7 +24,7 @@ st.title(" Real-Time Brain State Dashboard ")
 @st.cache_resource
 def load_and_train():
 
-    folder = r"C:\Users\user\anaconda3\envs\eeg_env\EEG Data\EEG Data"
+    folder = os.path.join(os.path.dirname(__file__), "EEG Data")
     files = [f for f in os.listdir(folder) if f.endswith(".mat")]
 
     all_epochs = []
